@@ -21,16 +21,14 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/about/*" element={<About />} />
+          <Route path="/products/:id/*" element={<ProductDetails />} />
           <Route path="/products" element={<Products />} />
           <Route path="/test" element={(
             <div>
               <h2>Test page</h2>
             </div>
           )} />
-
-          {/* <Route path="/redirect" element={<Redirect to="/about" />} /> */}
           <Route path="/redirect" element={<Navigate to="/about" />} />
           <Route 
             path="/checkout" 
